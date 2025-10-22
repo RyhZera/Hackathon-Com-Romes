@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Campus+ Connect — Corredor & Salas (alvo oculto)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Campus+ Connect</a>
+            <div class="ms-auto small text-muted">HTML • Bootstrap • Canvas • <i class="fa-solid fa-star"></i> Font
+                Awesome</div>
+        </div>
+    </header>
+
+    <main class="container py-4">
+        <div class="row g-4 align-items-start">
+            <!-- Canvas -->
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm position-relative">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span class="fw-semibold"><i class="fa-solid fa-gamepad"></i> Corredor & Salas (Alvo
+                            Oculto)</span>
+                        <div class="d-flex gap-2">
+                            <button id="btn-start" class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i>
+                                Start</button>
+                            <button id="btn-restart" class="btn btn-outline-secondary btn-sm"><i
+                                    class="fa-solid fa-rotate"></i> Reiniciar</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="game-wrapper">
+                            <canvas id="game" width="900" height="520"
+                                aria-label="Canvas do jogo: corredor e 4 salas"></canvas>
+                            <div id="overlay-lose" class="overlay d-none" role="dialog" aria-modal="true"
+                                aria-labelledby="lose-title">
+                                <div class="overlay-box text-center">
+                                    <h2 id="lose-title" class="mb-2"><i class="fa-solid fa-face-sad-tear me-2"></i>Você
+                                        perdeu</h2>
+                                    <p class="mb-3">Escolha errada ou tempo esgotado. Tente novamente!</p>
+                                    <button id="btn-try-again" class="btn btn-primary"><i
+                                            class="fa-solid fa-rotate-right me-1"></i>Jogar de novo</button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 small text-muted">Controles: setas ou WASD. Objetivo: entrar na <strong>sala
+                                correta</strong> sem dica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HUD -->
+            <div class="col-12 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header fw-semibold"><i class="fa-solid fa-gauge-high"></i> HUD</div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 bg-light rounded-3 text-center">
+                                    <div class="small text-muted">Tempo</div>
+                                    <div id="hud-timer" class="display-6">00</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-light rounded-3 text-center">
+                                    <div class="small text-muted">Pontuação</div>
+                                    <div id="hud-score" class="display-6">0</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="p-3 bg-light rounded-3 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        <div class="small text-muted">Melhor</div>
+                                        <div id="hud-best" class="fs-5">0</div>
+                                    </div>
+                                    <i class="fa-solid fa-trophy fs-3 text-warning"></i>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert alert-info small mb-0">
+                                    Todas as portas estão abertas, mas <strong>apenas uma é a correta</strong>. Entrar
+                                    na sala errada termina a rodada.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-top py-4">
+        <div class="container small d-flex flex-wrap gap-3 justify-content-between">
+            <span>© 2025 Campus+ Connect</span>
+            <span class="text-muted">Acessível: contraste e navegação por teclado</span>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

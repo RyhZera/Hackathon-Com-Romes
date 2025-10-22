@@ -1,0 +1,60 @@
+:root {
+    --brand: #0d6efd;
+    --corridor: #e9ecef;
+    --room: #fff;
+    --wall: #212529;
+    --door: #198754;
+    --player: #0d6efd;
+}
+
+body {
+    background: #f8f9fa;
+}
+
+.navbar-brand {
+    color: var(--brand);
+}
+
+.game-wrapper {
+    position: relative;
+}
+
+#game {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.card-header {
+    background: #fff;
+}
+
+.display-6 {
+    line-height: 1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, .55);
+    backdrop-filter: blur(2px);
+}
+
+.overlay-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    max-width: 320px;
+    width: 90%;
+}
+
+.d-none {
+    display: none;
+}

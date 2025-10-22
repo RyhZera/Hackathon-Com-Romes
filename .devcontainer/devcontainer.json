@@ -1,0 +1,14 @@
+{
+    "name": "Campus+ Connect — Alvo Oculto (v5)",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "ritwickdey.LiveServer"
+            ]
+        }
+    },
+    "postCreateCommand": "echo 'Devcontainer pronto — alvo oculto v5'"
+}
